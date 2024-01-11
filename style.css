@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(45deg, #ffaf00,#db2265,#bb00ff) no-repeat fixed;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    height: fit-content;
+}
+
+.card{
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s linear;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.abs{
+    background-color: #ffaf00;
+    width: 200%;
+    height: 700px;
+    border-radius: 50%;
+    position: absolute;
+    top: -100%;
+    left: -50%;
+    z-index: 0;
+    transition: 1s ease;
+}
+.number{
+    text-align: center;
+    padding: 40px 0px;
+    font-size: 70px;
+    font-weight: 600;
+    position: relative;
+    color: white;
+    z-index: 1;
+}
+.text{
+    position: relative;
+    font-size: 19px;
+    z-index: 1;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 40px;
+    z-index: 1;
+}
+.link{
+    display: block;
+    background-color: #ffaf00;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 30px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.503);
+    transition: 0.5s ease;
+}
+
+.card:hover .abs{
+    border-radius: 0%;
+    top: 0px;
+}
+.container:hover .card{
+    filter: blur(10px);
+    transform: scale(.9);
+    opacity: 0.5;
+}
+.container .card:hover{
+    filter: blur(0px);
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 5px 5px 10px black;
+}
+
+.card:hover .text{
+    color: white;
+}
+
+.link:hover{
+    transform: scale(1.1);
+}
+
+.orange{
+    background-color: #ffaf00;
+}
+
+.purple{
+    background-color: #bb00ff;
+}
+
+.red{
+    background-color: #db2265;
+}
+#copyright{
+    margin-top: 50px;
+    color: white;
+    font-size: 20px;
+}
+#copyright a{
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+}
+#copyright a:hover{
+    text-decoration: underline black;
+}
